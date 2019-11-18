@@ -1,0 +1,108 @@
+MongoDB is a No SQL database. 
+It is an open-source, cross-platform, document-oriented database written in C++.
+
+It is used for high volume data storage. 
+
+Mongo DB is a document-oriented database. It is an open source product, developed and supported by a company named 10gen.
+
+The manufacturing company 10gen has defined MongoDB as:
+
+"MongoDB is a scalable, open source, high performance, document-oriented database." - 10gen
+
+MongoDB was designed to work with commodity servers. Now it is used by the company of all sizes, across all industry.
+
+Each database contains collections which in turn contains documents. Each document can be different with a varying number of fields. The size and content of each document can be different from each other.
+
+The _id field is added by MongoDB to uniquely identify the document in the collection.
+-----------------------------------------------------------------------------------------------------
+3) What are the different types of NoSQL databases? Give some example.
+NoSQL database can be classified as 4 basic types:
+
+Key value store NoSQL database
+Document store NoSQL database
+Column store NoSQL database
+Graph base NoSQL databse
+There are many NoSQL databases. MongoDB, Cassandra, CouchBD, Hypertable, Redis, Riak, Neo4j, HBASE, Couchbase, MemcacheDB, Voldemort, RevenDB etc. are the examples of NoSQL databases.
+----------------------------------------------------------------------------------------------------
+4) Is MongoDB better than other SQL databases? If yes then how?
+MongoDB is better than other SQL databases because it allows a highly flexible and scalable document structure.
+
+For example:
+
+One data document in MongoDB can have five columns and the other one in the same collection can have ten columns.
+MongoDB database are faster than SQL databases due to efficient indexing and storage techniques.
+-----------------------------------------------------------------------------------------------------
+8) Does MongoDB support primary-key, foreign-key relationship?
+No. By Default, MongoDB doesn't support primary key-foreign key relationship.
+-----------------------------------------------------------------------------------------------------
+9) Can you achieve primary key - foreign key relationships in MongoDB?
+We can achieve primary key-foreign key relationship by embedding one document inside another. For example: An address document can be embedded inside customer document.
+-----------------------------------------------------------------------------------------------------
+10) Does MongoDB need a lot of RAM?
+No. There is no need a lot of RAM to run MongoDB. It can be run even on a small amount of RAM because it dynamically allocates and de-allocates RAM according to the requirement of the processes.
+-----------------------------------------------------------------------------------------------------
+11) Explain the structure of ObjectID in MongoDB.
+ObjectID is a 12-byte BSON type. These are:
+
+4 bytes value representing seconds
+3 byte machine identifier
+2 byte process id
+3 byte counter
+-----------------------------------------------------------------------------------------------------
+12) Is it true that MongoDB uses BSON to represent document structure?
+Yes.
+-----------------------------------------------------------------------------------------------------
+13) What are Indexes in MongoDB?
+In MondoDB, Indexes are used to execute query efficiently. Without indexes, MongoDB must perform a collection scan, i.e. scan every document in a collection, to select those documents that match the query statement. If an appropriate index exists for a query, MongoDB can use the index to limit the number of documents it must inspect.
+-----------------------------------------------------------------------------------------------------
+14) By default, which index is created by MongoDB for every collection?
+By default, the_id collection is created for every collection by MongoDB.
+-----------------------------------------------------------------------------------------------------
+15) What is a Namespace in MongoDB?
+Namespace is a concatenation of the database name and the collection name. Collection, in which MongoDB stores BSON objects.
+-----------------------------------------------------------------------------------------------------
+20) Does MongoDB need a lot space of Random Access Memory (RAM)?
+No. MongoDB can be run on small free space of RAM.
+-----------------------------------------------------------------------------------------------------
+21) What language you can use with MongoDB?
+MongoDB client drivers supports all the popular programming languages so there is no issue of language, you can use any language that you want.
+-----------------------------------------------------------------------------------------------------
+22) Does MongoDB database have tables for storing records?
+No. Instead of tables, MongoDB uses "Collections" to store data.
+-----------------------------------------------------------------------------------------------------
+23) Do the MongoDB databases have schema?
+Yes. MongoDB databases have dynamic schema. There is no need to define the structure to create collections.
+-----------------------------------------------------------------------------------------------------
+
+db.collection.insertOne() 
+db.collection.insertMany() 
+db.collection.find()
+db.collection.updateOne() 
+db.collection.updateMany() 
+db.collection.replaceOne() 
+
+db.collection.deleteOne() 
+db.collection.deleteMany() 
+
+db,collection.distinct()
+
+db.inventory.aggregate([  {$match:{'sku':'almonds'}},
+		{$lookup:{
+			from:'orders',
+			localField:'sku',
+			foreignField:'item',
+			as:'order_details'
+			}
+			}
+
+
+]).pretty()
+-----------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------
